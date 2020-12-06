@@ -58,16 +58,18 @@
 			<h1 style="color : #DC143C ;font-family: Lobster;font-size: 40px"><center>Check your BMI</center></h1>
 			<form name="bmiForm">
 				<center>
-					<table style="font-family: Lobster;" bgcolor="#DC143C" border="10" bordercolor="#FF6347" rules="none" cellspacing="0" cellpadding="4" style="color: #FF6347;" height="400" width="500">
+					<table style="font-family: Lobster;"bgcolor="#DC143C" border="10" bordercolor="#FF6347"  rules="none" cellspacing="0" cellpadding="4" style="color: white;" height="400" width="500">
 						<tr>
 						<td style="font-size: 25px;">Your Weight: <input type="text" name="weight" size="20"><br /></td>
 						</tr>
-						<tr><td style="font-size: 25px;">Your Height(cm): <input type="text" name="height" size="15"><br /></tr></td>
+						<tr>
+						<td style="font-size: 25px">Your Height(cm): <input type="text" name="height" size="15"><br /></td>
+						</tr>
 						<br>
-						<tr><td style="font-size: 25px"><center><input type="button" value="Calculate BMI" onClick="calculateBmi()"><br /></center></td></tr>
+						<tr><td style="font-size: 25px"><center><input type="button" value="Calculate BMI" onClick="calculateBmi()"><br /></tr></td>
 						<br>
 						<tr><td style="font-size: 25px">Your BMI: <input type="text" name="bmi" size="20"><br /></tr></td>
-						<tr><td style="font-size: 25px"><center>Result <input type="text" name="meaning" size="30"><br /></center></td></tr>
+						<tr><td style="font-size: 25px; padding-left: 30px;"><center>Result</center> <input type="text" name="meaning" size="30"><br /></tr></td>
 						<tr><td style="font-size: 25px"><center><input type="reset" value="Reset" /></tr></td>
 					</table>
 
