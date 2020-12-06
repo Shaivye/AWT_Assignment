@@ -6,6 +6,28 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script language="JavaScript">
+
+						function calculateBmi() {
+						var weight = document.bmiForm.weight.value
+						var height = document.bmiForm.height.value
+						if(weight > 0 && height > 0){	
+						var finalBmi = weight/(height/100*height/100)
+						document.bmiForm.bmi.value = finalBmi
+						if(finalBmi < 18.5){
+						document.bmiForm.meaning.value = "Underweight"
+						}
+						if(finalBmi > 18.5 && finalBmi < 25){
+						document.bmiForm.meaning.value = "Healthy"
+						}
+						if(finalBmi > 25){
+						document.bmiForm.meaning.value = "Overweight"
+						}
+						}
+						else{
+						alert("INVALID DATA")
+						}
+						}
 	
 </head>
 <body style="background-color:#FFFF99;">
@@ -26,20 +48,22 @@
 		</div>
 
 
-		<div id="calbmi">
+<div id="calbmi">
 			<h1 style="color : #DC143C ;font-family: Lobster;font-size: 40px"><center>Check your BMI</center></h1>
 			<form name="bmiForm">
 				<center>
-					<table style="font-family: Lobster;" bgcolor="#DC143C" border="10" bordercolor="#FF6347" rules="none" cellspacing="0" cellpadding="4" style="color: #FF6347;" height="400" width="500">
+					<table style="font-family: Lobster;"bgcolor="#DC143C" border="10" bordercolor="#FF6347"  rules="none" cellspacing="0" cellpadding="4" style="color: white;" height="400" width="500">
 						<tr>
 						<td style="font-size: 25px;">Your Weight: <input type="text" name="weight" size="20"><br /></td>
 						</tr>
-						<tr><td style="font-size: 25px;">Your Height(cm): <input type="text" name="height" size="15"><br /></tr></td>
+						<tr>
+						<td style="font-size: 25px">Your Height(cm): <input type="text" name="height" size="15"><br /></td>
+						</tr>
 						<br>
-						<tr><td style="font-size: 25px"><center><input type="button" value="Calculate BMI" onClick="calculateBmi()"><br /></center></td></tr>
+						<tr><td style="font-size: 25px"><center><input type="button" value="Calculate BMI" onClick="calculateBmi()"><br /></tr></td>
 						<br>
 						<tr><td style="font-size: 25px">Your BMI: <input type="text" name="bmi" size="20"><br /></tr></td>
-						<tr><td style="font-size: 25px"><center>Result <input type="text" name="meaning" size="30"><br /></center></td></tr>
+						<tr><td style="font-size: 25px; padding-left: 30px;"><center>Result</center> <input type="text" name="meaning" size="30"><br /></tr></td>
 						<tr><td style="font-size: 25px"><center><input type="reset" value="Reset" /></tr></td>
 					</table>
 
@@ -104,3 +128,4 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
+
